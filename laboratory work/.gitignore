@@ -1,0 +1,12 @@
+.
+!.cpp
+!.h
+stdafx.*
+targetver.*
+* . *
+! * .cpp
+! * .h
+stdafx. *
+targetver. *
+! * .md
+!*.bmp
