@@ -4,8 +4,7 @@
 #include <cstdlib>
 #include <ctime> 
 #include"implementation.h"
-#pragma once
-Game initGame(char& userChar) {
+Game initGame(char userChar) {
 	srand(time(NULL));
 	Game templ;
 	for (int i = 0; i <= 2; i++)
@@ -21,9 +20,10 @@ Game initGame(char& userChar) {
 	return templ;
 };
 
-void updateDisplay(const Game& game) {
+void updateDisplay(const Game game) {
 	system("cls");
 	std::cout << '\n';
+	std::cout << "      1" << "   2" << "   3\n";
 	std::cout << "-----------------\n 1  | "
 		<< game.bord[0][0] << " | " << game.bord[0][1] << " | " << game.bord[0][2] << " |\n"
 		<< "-----------------\n 2  | "
@@ -31,19 +31,7 @@ void updateDisplay(const Game& game) {
 		<< "-----------------\n 3  | "
 		<< game.bord[2][0] << " | " << game.bord[2][1] << " | " << game.bord[2][2] << " |\n"
 		<< "-----------------\n";
-	/**
-* Выполняет следующие действия:
-*  1. Очищает экран
-*  2. Отображает содержимое игрового поля. Например так (можно по своему):
-*         a   b   c
-*       -------------
-*     1 | O | O | X |
-*       -------------
-*     2 |   |   |   |
-*       -------------
-*     3 |   |   | X |
-*       -------------
-*/
+
 };
 void botTurn(Game* game) {
 	srand(time(NULL));
@@ -147,7 +135,7 @@ void botTurn(Game* game) {
 		if ((k == 3) && (i == 2)) { break; }
 		if (k == 3) { i++; k = 0; }
 	}
-	//   рандомный ход
+	//   СЂР°РЅРґРѕРјРЅС‹Р№ С…РѕРґ
 	i = 0; k = 0; counter = 0;
 	while ((i != 3) && (!game->isUserTurn)) {
 		if (game->bord[i][k] == ' ') { counter++; }
@@ -172,6 +160,11 @@ void botTurn(Game* game) {
 
 void userTurn(Game* game) {
 	int i = 0, k = 0;
+	static int first = 0;
+	if (first == 0) {
+		std::cout << "Rule of the game: you can walk the same way as in a naval battle, only instead of '1 a', '2 b' there will be '1 1', '2 2', respectively.\n";
+	}
+	first++;
 	std::cout << "Your move:";
 	if (game->isUserTurn) {
 		std::cin >> i >> k; i--; k--;

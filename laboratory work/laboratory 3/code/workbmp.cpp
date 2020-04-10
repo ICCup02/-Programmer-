@@ -23,7 +23,7 @@ int main()
 	BmpImg img;
 	int8_t bit = 0;
 	img.read("pic1.bmp");
-	if (BMP_OK != 0) { return EXIT_FAILURE; }
+	if (BMP_OK != img.read("pic1.bmp")) { return EXIT_FAILURE; }
 	for (int y = img.get_height() - 1, x; y >= 0; y--)
 	{
 		for (x = img.get_width() - 1; x >= 0; x--)

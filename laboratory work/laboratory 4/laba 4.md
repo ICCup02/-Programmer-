@@ -8,8 +8,8 @@
 ### Отчёт по лабораторной работе №4 <br/> по дисциплине "Программирование"
 <br/>
 ​
-студента 1 курса группы ИВТ-192(1)<br/>
-Абибулаев Ремзи Энверовича 
+студента 1 курса группы ИВТ-б-о-192(1)<br/>
+Абибулаев Ремзи Энверовича<br/>
 направления подготовки 09.03.01 "Информатика и Вычислительная Техника"
 <br/>
 ​
@@ -20,9 +20,8 @@
 </tr>
 </table>
 <br/><br/>
-
-Симферополь, 2019
-<br/><br/>
+<p align="center">Симферополь, 2020</p>
+<hr>
 
 **Цель:**
 1. Закрепить навыки работы с перечислениями;
@@ -81,7 +80,7 @@ int main() {
 #include <cstdlib>
 #include <ctime> 
 #include"implementation.h"
-Game initGame(char& userChar) {
+Game initGame(char userChar) {
 	srand(time(NULL));
 	Game templ;
 	for (int i = 0; i <= 2; i++)
@@ -97,9 +96,10 @@ Game initGame(char& userChar) {
 	return templ;
 };
 
-void updateDisplay(const Game& game) {
+void updateDisplay(const Game game) {
 	system("cls");
 	std::cout << '\n';
+	std::cout << "      1" << "   2" << "   3\n";
 	std::cout << "-----------------\n 1  | "
 		<< game.bord[0][0] << " | " << game.bord[0][1] << " | " << game.bord[0][2] << " |\n"
 		<< "-----------------\n 2  | "
@@ -236,6 +236,11 @@ void botTurn(Game* game) {
 
 void userTurn(Game* game) {
 	int i = 0, k = 0;
+	static int first = 0;
+	if (first == 0) {
+		std::cout << "Rule of the game: you can walk the same way as in a naval battle, only instead of '1 a', '2 b' there will be '1 1', '2 2', respectively.\n";
+	}
+	first++;
 	std::cout << "Your move:";
 	if (game->isUserTurn) {
 		std::cin >> i >> k; i--; k--;
@@ -344,7 +349,7 @@ struct Game {
 *  4. Устанавливает символ для бота
 *  5. Возвращает заполненную структуру
 */
-Game initGame(char &userChar);
+Game initGame(char userChar);
 /**
 * Выполняет следующие действия:
 *  1. Очищает экран
@@ -358,7 +363,7 @@ Game initGame(char &userChar);
 *     3 |   |   | X |
 *       -------------
 */
-void updateDisplay(const Game& game);
+void updateDisplay(const Game game);
 /**
 * Выполняет ход бота. В выбранную ячейку устанавливается символ которым играет бот.
 * Бот должен определять строку, столбец или диагональ в которой у игрока больше всего иксиков/ноликов и ставить туда свой символ. Если на поле ещё нет меток, бот должен ставить свой знак в центр. В остальных случаях бот ходит рандомно.
