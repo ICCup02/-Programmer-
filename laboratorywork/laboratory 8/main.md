@@ -32,22 +32,21 @@
 
 1. Скриншот окна настроек Qt Creator после настройки для сборки android приложений:
 <center>
-<img src="resources\1.png"><br/>
+<img src="resources\1.PNG"><br/>
 Рис. 1.</center>
     
 2. Для сборки проекта был выбран предложенный в методичке лабораторной работы проект `Qt SCXML Calculator QML Example`:
     
 <center>
-<img src="resources\2.png"><br/>
+<img src="resources\2.PNG"><br/>
 Рис. 2.</center>
     
 3. Скриншот экрана с запущенным приложением на устройстве:
 
 <center>
-<img src="resources\3.png"><br/>
+<img src="resources\3.PNG"><br/>
 Рис. 3.</center>
     
-
 **Ввывод:**
 
 В данной лабораторной работе были получены навыки настройки Qt Creator для работы с Android. А также получили базовые понятия связанные с мобильной разработкой, научились создавать мобильные приложения при помощи фреймворка Qt 5.14.
