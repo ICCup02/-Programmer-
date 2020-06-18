@@ -1,4 +1,5 @@
 *.v*
 *.sln
 Debug
-laboratory 9
+googletest-master
+build-main*
