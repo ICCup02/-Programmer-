@@ -1,5 +1,5 @@
 *.v*
 *.sln
 Debug
-googletest-master
+googletest*
 build-main*
