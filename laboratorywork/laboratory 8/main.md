@@ -32,19 +32,19 @@
 
 1. Скриншот окна настроек Qt Creator после настройки для сборки android приложений:
 <center>
-<img src="resources\1.PNG"><br/>
+<img src="resources\1.png"><br/>
 Рис. 1.</center>
     
 2. Для сборки проекта был выбран предложенный в методичке лабораторной работы проект `Qt SCXML Calculator QML Example`:
     
 <center>
-<img src="resources\2.PNG"><br/>
+<img src="resources\2.png"><br/>
 Рис. 2.</center>
     
 3. Скриншот экрана с запущенным приложением на устройстве:
 
 <center>
-<img src="resources\3.PNG"><br/>
+<img src="resources\3.png"><br/>
 Рис. 3.</center>
     
 **Ввывод:**
