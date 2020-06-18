@@ -35,7 +35,7 @@
 <img src="resources\1.png"><br/>
 Рис. 1.</center>
     
-2. Для сборки проекта был выбран предложенный в методичке лабораторной работы проект `Qt SCXML Calculator QML Example`:
+1. Для сборки проекта был выбран предложенный в статье по `отладке android приложений собранных в Qt Creator на реальных устройсвах` лабораторной работы проект `Qt SCXML Calculator QML Example`:
     
 <center>
 <img src="resources\2.png"><br/>
