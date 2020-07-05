@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="26324e47-2c46-4bd7-a3ec-dc35747322bc" name="Practic" url="http://83.220.173.39">
+        <fileTransfer accessType="SFTP" host="83.220.173.39" port="22" sshConfigId="fd96a03b-bba3-4b1b-b013-704d395021cb" sshConfig="botdevs_ICCup@83.220.173.39:22 key" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
